@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class OperationRequest {
-   private String campaignId;
-   private String fieldName;
-   private String operation;
+   private String name;
+   private String code;
 }

@@ -9,5 +9,5 @@ import com.mustache.poc.entity.Operation;
 
 @Repository
 public interface OperationsRepo extends JpaRepository<Operation, UUID> {
-   Operation findFirstByCampaignIdAndFieldName(String campaignId, String fieldName);
+   Operation findFirstByName(String name);
 }

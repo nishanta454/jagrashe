@@ -21,7 +21,7 @@ public class HtmlService {
      public String html(HtmlRequest request) {
     	 Mustache mustache = mustacheFactory.compile(new StringReader(request.getTemplate()), "todo_template");
     	 StringWriter writer = new StringWriter();
-    	 operationsService.execute(request.getData(), request.getCampaignId());
+    	 request.getData().putAll(operationsService.getAll());
     	 mustache.execute(writer, request.getData());
     	 return writer.toString();
      }

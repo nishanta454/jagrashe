@@ -2,7 +2,6 @@ package com.mustache.poc.entity;
 
 import java.util.UUID;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +18,7 @@ public class Operation {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 
-	private String campaignId;
+	private String name;
 
-	private String fieldName;
-
-	@Column(length = Integer.MAX_VALUE)
-	private String operation;
+	private String code;
 }
